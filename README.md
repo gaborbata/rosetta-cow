@@ -142,7 +142,6 @@ if(System args size == 2) then(
 ) else(
   "Usage: cowsay [message]" println
 )
-
 ```
 
 > Implemented using: Io Programming Language, v. 20110905
@@ -181,7 +180,7 @@ public class Cowsay {
 }
 ```
 
-> Implemented using: openjdk 11.0.3
+> Implemented using: openjdk version 11.0.4
 </details>
 
 <details><summary>JavaScript</summary>
@@ -215,7 +214,7 @@ if (args.length === 1) {
 }
 ```
 
-> Implemented using: node v8.10.0
+> Implemented using: Node.js v8.10.0
 </details>
 
 <details><summary>Lua</summary>
@@ -246,7 +245,7 @@ else
 end
 ```
 
-> Implemented using: Lua 5.3.5
+> Implemented using: Lua 5.3.3
 </details>
 
 <details><summary>Pascal</summary>
@@ -325,7 +324,7 @@ else:
   print("Usage: cowsay [message]")
 ```
 
-> Implemented using: Python 2.7.15rc1
+> Implemented using: Python 2.7.15+
 </details>
 
 <details><summary>Ruby</summary>

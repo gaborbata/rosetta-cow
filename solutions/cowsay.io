@@ -23,4 +23,3 @@ if(System args size == 2) then(
 ) else(
   "Usage: cowsay [message]" println
 )
-

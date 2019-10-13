@@ -3,7 +3,7 @@
 LANG_DATA = {
   lua: {
     name: "Lua",
-    version: "Lua 5.3.5"
+    version: "Lua 5.3.3"
   },
   rb: {
     name: "Ruby",
@@ -11,11 +11,11 @@ LANG_DATA = {
   },
   java: {
     name: "Java",
-    version: "openjdk 11.0.3"
+    version: "openjdk version 11.0.4"
   },
   js: {
     name: "JavaScript",
-    version: "node v8.10.0"
+    version: "Node.js v8.10.0"
   },
   io: {
     name: "Io",
@@ -31,7 +31,7 @@ LANG_DATA = {
   },
   py: {
     name: "Python",
-    version: "Python 2.7.15rc1"
+    version: "Python 2.7.15+"
   },
   pas: {
     name: "Pascal",
