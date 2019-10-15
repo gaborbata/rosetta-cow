@@ -36,6 +36,10 @@ LANG_DATA = {
   pas: {
     name: "Pascal",
     version: "Free Pascal Compiler version 3.0.4"
+  },
+  c: {
+    name: "C",
+    version: "gcc (GCC) 7.4.0"
   }
 }
 
