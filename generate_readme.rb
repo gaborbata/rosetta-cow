@@ -1,6 +1,10 @@
 #!/usr/bin/env ruby
 
 LANG_DATA = {
+  sh: {
+    name: "Bash",
+    version: "GNU bash, version 5.0.7"
+  },
   lua: {
     name: "Lua",
     version: "Lua 5.3.3"
