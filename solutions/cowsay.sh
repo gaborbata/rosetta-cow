@@ -15,7 +15,7 @@ border() {
 }
 
 if [ $# -eq 1 ]; then
-  printf "$TEMPLATE" $(border "$1" "_") $1 $(border "$1" "-")
+  printf "$TEMPLATE" $(border "$1" "_") "$1" $(border "$1" "-")
 else
   echo "Usage: cowsay [message]"
 fi
