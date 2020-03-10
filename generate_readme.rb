@@ -44,6 +44,10 @@ LANG_DATA = {
   c: {
     name: "C",
     version: "gcc (GCC) 7.4.0"
+  },
+  ts: {
+    name: "TypeScript",
+    version: "ts-node v8.6.2"
   }
 }
 
