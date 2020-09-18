@@ -1,0 +1,25 @@
+#!/usr/bin/env goby
+
+def template(text)
+String.fmt "
+ %s
+< %s >
+ %s
+        \\   ^__^
+         \\  (oo)\\_______
+            (__)\\       )\\/\\
+                ||----w |
+                ||     ||
+", border(text, '_'), text, border(text, '-')
+end
+
+def border(text, char)
+  char * (text.length + 2)
+end
+
+if ARGV.length == 1
+  text = ARGV[0]
+  puts template(text)
+else
+  puts "Usage: cowsay [message]"
+end

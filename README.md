@@ -81,6 +81,39 @@ int main(int argc, char *argv[]) {
 > Implemented using: gcc (GCC) 7.4.0
 </details>
 
+<details><summary>Goby</summary>
+
+```gb
+#!/usr/bin/env goby
+
+def template(text)
+String.fmt "
+ %s
+< %s >
+ %s
+        \\   ^__^
+         \\  (oo)\\_______
+            (__)\\       )\\/\\
+                ||----w |
+                ||     ||
+", border(text, '_'), text, border(text, '-')
+end
+
+def border(text, char)
+  char * (text.length + 2)
+end
+
+if ARGV.length == 1
+  text = ARGV[0]
+  puts template(text)
+else
+  puts "Usage: cowsay [message]"
+end
+```
+
+> Implemented using: goby 0.1.13
+</details>
+
 <details><summary>Go (Golang)</summary>
 
 ```go

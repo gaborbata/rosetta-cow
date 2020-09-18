@@ -48,6 +48,10 @@ LANG_DATA = {
   ts: {
     name: "TypeScript",
     version: "ts-node v8.6.2"
+  },
+  gb: {
+    name: "Goby",
+    version: "goby 0.1.13"
   }
 }
 
