@@ -52,6 +52,10 @@ LANG_DATA = {
   gb: {
     name: "Goby",
     version: "goby 0.1.13"
+  },
+  rs: {
+    name: "Rust",
+    version: "rustc 1.48.0 (7eac88abb 2020-11-16)"
   }
 }
 

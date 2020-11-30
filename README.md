@@ -425,6 +425,46 @@ end
 > Implemented using: ruby 2.5.1p57
 </details>
 
+<details><summary>Rust</summary>
+
+```rs
+use std::env;
+
+const TEMPLATE: &str = r#"
+ {}
+< {} >
+ {}
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+"#;
+
+fn border(text: &str, chr: &str) -> String {
+    return chr.repeat(text.chars().count() + 2);
+}
+
+fn main() {
+    let args: Vec<String> = env::args().skip(1).collect();
+    if args.len() == 1 {
+        let text = &args[0];
+        println!(
+            "{}",
+            TEMPLATE
+                .replacen("{}", &border(text, "_"), 1)
+                .replacen("{}", text, 1)
+                .replacen("{}", &border(text, "-"), 1)
+        );
+    } else {
+        println!("Usage: cowsay [message]");
+    }
+}
+```
+
+> Implemented using: rustc 1.48.0 (7eac88abb 2020-11-16)
+</details>
+
 <details><summary>Bash</summary>
 
 ```sh
