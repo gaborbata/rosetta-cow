@@ -361,6 +361,39 @@ end.
 > Implemented using: Free Pascal Compiler version 3.0.4
 </details>
 
+<details><summary>PHP</summary>
+
+```php
+#!/usr/local/bin/php
+<?php
+function template($text, $border) {
+return "
+ {$border($text, '_')}
+< {$text} >
+ {$border($text, '-')}
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+";
+}
+
+$border = function($text, $char) {
+  return str_repeat($char, strlen($text) + 2);
+};
+
+if ($argc == 2) {
+  print template($argv[1], $border);
+} else {
+  print "Usage: cowsay [message]\n";
+}
+?>
+```
+
+> Implemented using: PHP 8.0.0 (cli) (built: Nov 24 2020 22:02:58)
+</details>
+
 <details><summary>Python</summary>
 
 ```py
