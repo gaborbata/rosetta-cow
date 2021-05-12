@@ -60,6 +60,10 @@ LANG_DATA = {
   php: {
     name: "PHP",
     version: "PHP 8.0.0 (cli) (built: Nov 24 2020 22:02:58)"
+  },
+  kt: {
+    name: "Kotlin",
+    version: "Kotlin version 1.5.0-release-749"
   }
 }
 
