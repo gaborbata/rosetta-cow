@@ -1,46 +1,46 @@
-# Rosetta Cow 🐄
-
-Rosetta Cow project is intended to present solutions to the same task
-(i.e. to implement [cowsay](https://en.wikipedia.org/wiki/Cowsay) which prints an ASCII cow with a message)
-in as many different programming languages as possible, to demonstrate how languages are similar and different
-(similarly as in [Rosetta Code](https://en.wikipedia.org/wiki/Rosetta_Code)).
-
-> The Rosetta name comes from [The Rosetta Stone](https://en.wikipedia.org/wiki/Rosetta_Stone).
-
-## Description of the task
-
-Implement a command-line application (called cowsay) which prints an ASCII cow with a message in a speech bubble.
-The width of the enclosing speech bubble must be dynamic, depending on the length of the message.
-
-The first argument of the application is the message.
-If zero or more than one parameters are provided then a usage information is printed in the console.
-
-The solution must be in a single file. Only standard libraries of the given programming language can be used.
-
-## Examples
-
-cowsay without arguments:
-
-```
-$ cowsay
-Usage: cowsay [message]
-```
-
-cowsay with the "Hello World!" message as argument:
-
-```
-$ cowsay "Hello World!"
-  ____________
-< Hello World! >
-  ------------
-         \   ^__^ 
-          \  (oo)\_______
-             (__)\       )\/\
-                 ||----w |
-                 ||     ||
-```
-
-## Solutions
+# Rosetta Cow 🐄
+
+Rosetta Cow project is intended to present solutions to the same task
+(i.e. to implement [cowsay](https://en.wikipedia.org/wiki/Cowsay) which prints an ASCII cow with a message)
+in as many different programming languages as possible, to demonstrate how languages are similar and different
+(similarly as in [Rosetta Code](https://en.wikipedia.org/wiki/Rosetta_Code)).
+
+> The Rosetta name comes from [The Rosetta Stone](https://en.wikipedia.org/wiki/Rosetta_Stone).
+
+## Description of the task
+
+Implement a command-line application (called cowsay) which prints an ASCII cow with a message in a speech bubble.
+The width of the enclosing speech bubble must be dynamic, depending on the length of the message.
+
+The first argument of the application is the message.
+If zero or more than one parameters are provided then a usage information is printed in the console.
+
+The solution must be in a single file. Only standard libraries of the given programming language can be used.
+
+## Examples
+
+cowsay without arguments:
+
+```
+$ cowsay
+Usage: cowsay [message]
+```
+
+cowsay with the "Hello World!" message as argument:
+
+```
+$ cowsay "Hello World!"
+  ____________
+< Hello World! >
+  ------------
+         \   ^__^ 
+          \  (oo)\_______
+             (__)\       )\/\
+                 ||----w |
+                 ||     ||
+```
+
+## Solutions
 
 <details><summary>C</summary>
 
@@ -292,28 +292,28 @@ if (args.length === 1) {
 <details><summary>Kotlin</summary>
 
 ```kt
-fun template(text: String) =
-    """
-     ${border(text, "_")}
-    < ${text} >
-     ${border(text, "-")}
-            \   ^__^
-             \  (oo)\_______
-                (__)\       )\/\
-                    ||----w |
-                    ||     ||
-    """.trimIndent()
-
-fun border(text: String, chr: String) = chr.repeat(text.length + 2)
-
-fun main(args: Array<String>) {
-    if (args.size == 1) {
-        val text = args[0]
-        println(template(text))
-    } else {
-        println("Usage: cowsay [message]")
-    }
-}
+fun template(text: String) =
+    """
+     ${border(text, "_")}
+    < ${text} >
+     ${border(text, "-")}
+            \   ^__^
+             \  (oo)\_______
+                (__)\       )\/\
+                    ||----w |
+                    ||     ||
+    """.trimIndent()
+
+fun border(text: String, chr: String) = chr.repeat(text.length + 2)
+
+fun main(args: Array<String>) {
+    if (args.size == 1) {
+        val text = args[0]
+        println(template(text))
+    } else {
+        println("Usage: cowsay [message]")
+    }
+}
 ```
 
 > Implemented using: Kotlin version 1.5.0-release-749
