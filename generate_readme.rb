@@ -64,6 +64,10 @@ LANG_DATA = {
   kt: {
     name: "Kotlin",
     version: "Kotlin version 1.5.0-release-749"
+  },
+  vbs: {
+    name: "VBScript",
+    version: "Microsoft (R) Windows Script Host Version 5.812"
   }
 }
 
@@ -75,7 +79,7 @@ readme_file.each_line do |line|
 end
 readme_file.close
 
-readme_contents += "\n"
+readme_contents = readme_contents.gsub("\r\n", "\n").gsub("\r", "\n") + "\n"
 
 Dir.glob('solutions/*').sort_by { |file_name| file_name.downcase }.each do |file_name|
   extension = file_name.split('.').last
@@ -83,7 +87,7 @@ Dir.glob('solutions/*').sort_by { |file_name| file_name.downcase }.each do |file
   version = LANG_DATA[extension.to_sym][:version]
   readme_contents += "<details><summary>#{name}</summary>\n\n"
   readme_contents += "```#{extension}\n"
-  readme_contents += File.read(file_name)
+  readme_contents += File.read(file_name).gsub("\r\n", "\n").gsub("\r", "\n")
   readme_contents += "```\n\n"
   readme_contents += "> Implemented using: #{version}\n"
   readme_contents += "</details>\n\n"

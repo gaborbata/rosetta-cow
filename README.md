@@ -1,16 +1,47 @@
-# Rosetta Cow 🐄
-Rosetta Cow project is intended to present solutions to the same task(i.e. to implement [cowsay](https://en.wikipedia.org/wiki/Cowsay) which prints an ASCII cow with a message)in as many different programming languages as possible, to demonstrate how languages are similar and different(similarly as in [Rosetta Code](https://en.wikipedia.org/wiki/Rosetta_Code)).
-> The Rosetta name comes from [The Rosetta Stone](https://en.wikipedia.org/wiki/Rosetta_Stone).
-## Description of the task
-Implement a command-line application (called cowsay) which prints an ASCII cow with a message in a speech bubble.The width of the enclosing speech bubble must be dynamic, depending on the length of the message.
-The first argument of the application is the message.If zero or more than one parameters are provided then a usage information is printed in the console.
-The solution must be in a single file. Only standard libraries of the given programming language can be used.
-## Examples
-cowsay without arguments:
-```$ cowsayUsage: cowsay [message]```
-cowsay with the "Hello World!" message as argument:
-```$ cowsay "Hello World!"  ____________< Hello World! >  ------------         \   ^__^           \  (oo)\_______             (__)\       )\/\                 ||----w |                 ||     ||```
-## Solutions
+# Rosetta Cow 🐄
+
+Rosetta Cow project is intended to present solutions to the same task
+(i.e. to implement [cowsay](https://en.wikipedia.org/wiki/Cowsay) which prints an ASCII cow with a message)
+in as many different programming languages as possible, to demonstrate how languages are similar and different
+(similarly as in [Rosetta Code](https://en.wikipedia.org/wiki/Rosetta_Code)).
+
+> The Rosetta name comes from [The Rosetta Stone](https://en.wikipedia.org/wiki/Rosetta_Stone).
+
+## Description of the task
+
+Implement a command-line application (called cowsay) which prints an ASCII cow with a message in a speech bubble.
+The width of the enclosing speech bubble must be dynamic, depending on the length of the message.
+
+The first argument of the application is the message.
+If zero or more than one parameters are provided then a usage information is printed in the console.
+
+The solution must be in a single file. Only standard libraries of the given programming language can be used.
+
+## Examples
+
+cowsay without arguments:
+
+```
+$ cowsay
+Usage: cowsay [message]
+```
+
+cowsay with the "Hello World!" message as argument:
+
+```
+$ cowsay "Hello World!"
+  ____________
+< Hello World! >
+  ------------
+         \   ^__^ 
+          \  (oo)\_______
+             (__)\       )\/\
+                 ||----w |
+                 ||     ||
+```
+
+## Solutions
+
 <details><summary>C</summary>
 
 ```c
@@ -559,5 +590,41 @@ if (args.length === 1) {
 ```
 
 > Implemented using: ts-node v8.6.2
+</details>
+
+<details><summary>VBScript</summary>
+
+```vbs
+Function template(text)
+  template = Join(Array( _
+    " " & border(text, "_"), _
+    "< " & text & " >", _
+    " " & border(text, "-"), _
+    "        \   ^__^", _
+    "         \  (oo)\_______", _
+    "            (__)\       )\/\", _
+    "                ||----w |", _
+    "                ||     ||" _
+  ), vbNewLine)
+End Function
+
+Function border(text, char)
+  Dim i, result
+  For i = 1 To Len(text) + 2
+    result = result & char
+  Next
+  border = result
+End Function
+
+If WScript.Arguments.Length = 1 Then
+  Dim text
+  text = WScript.Arguments(0)
+  WScript.Echo(template(text))
+Else
+  WScript.Echo("Usage: cowsay [message]")
+End If
+```
+
+> Implemented using: Microsoft (R) Windows Script Host Version 5.812
 </details>
 
