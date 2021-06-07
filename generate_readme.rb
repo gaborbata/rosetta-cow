@@ -68,6 +68,10 @@ LANG_DATA = {
   vbs: {
     name: "VBScript",
     version: "Microsoft (R) Windows Script Host Version 5.812"
+  },
+  ps1: {
+    name: "PowerShell",
+    version: "PowerShell version 5.1.19041.906"
   }
 }
 
