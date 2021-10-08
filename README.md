@@ -255,6 +255,36 @@ public class Cowsay {
 > Implemented using: openjdk version 11.0.4
 </details>
 
+<details><summary>Julia</summary>
+
+```jl
+#!/usr/bin/env julia
+
+template(text) =
+    """
+     $(border(text, '_'))
+    < $text >
+     $(border(text, '-'))
+            \\   ^__^
+             \\  (oo)\\_______
+                (__)\\       )\\/\\
+                    ||----w |
+                    ||     ||
+    """
+
+border(text, char) = repeat(char, (length(text) + 2))
+
+if length(ARGS) == 1
+    text = ARGS[1]
+    println(template(text))
+else
+    println("Usage: cowsay [message]")
+end
+```
+
+> Implemented using: julia version 1.6.3
+</details>
+
 <details><summary>JavaScript</summary>
 
 ```js

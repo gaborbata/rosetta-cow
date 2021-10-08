@@ -72,6 +72,10 @@ LANG_DATA = {
   ps1: {
     name: "PowerShell",
     version: "PowerShell version 5.1.19041.906"
+  },
+  jl: {
+    name: "Julia",
+    version: "julia version 1.6.3"
   }
 }
 
