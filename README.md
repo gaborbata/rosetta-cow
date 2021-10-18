@@ -272,7 +272,7 @@ template(text) =
                     ||     ||
     """
 
-border(text, char) = repeat(char, (length(text) + 2))
+border(text, char) = repeat(char, length(text) + 2)
 
 if length(ARGS) == 1
     text = ARGS[1]
