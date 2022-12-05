@@ -224,18 +224,16 @@ if(System args size == 2) then(
 ```java
 public class Cowsay {
 
-    private static final String TEMPLATE = String.join("\n",
-        "",
-        " %s",
-        "< %s >",
-        " %s",
-        "        \\   ^__^",
-        "         \\  (oo)\\_______",
-        "            (__)\\       )\\/\\",
-        "                ||----w |",
-        "                ||     ||",
-        ""
-    );
+    private static final String TEMPLATE = """
+         %s
+        < %s >
+         %s
+                \\   ^__^
+                 \\  (oo)\\_______
+                    (__)\\       )\\/\\
+                        ||----w |
+                        ||     ||
+        """;
 
     private static String border(String text, String border) {
         return border.repeat(text.length() + 2);
@@ -252,7 +250,7 @@ public class Cowsay {
 }
 ```
 
-> Implemented using: openjdk version 11.0.4
+> Implemented using: openjdk version 17.0.4
 </details>
 
 <details><summary>Julia</summary>

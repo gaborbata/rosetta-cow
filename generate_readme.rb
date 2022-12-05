@@ -15,7 +15,7 @@ LANG_DATA = {
   },
   java: {
     name: "Java",
-    version: "openjdk version 11.0.4"
+    version: "openjdk version 17.0.4"
   },
   js: {
     name: "JavaScript",

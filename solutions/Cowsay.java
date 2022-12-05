@@ -1,17 +1,15 @@
 public class Cowsay {
 
-    private static final String TEMPLATE = String.join("\n",
-        "",
-        " %s",
-        "< %s >",
-        " %s",
-        "        \\   ^__^",
-        "         \\  (oo)\\_______",
-        "            (__)\\       )\\/\\",
-        "                ||----w |",
-        "                ||     ||",
-        ""
-    );
+    private static final String TEMPLATE = """
+         %s
+        < %s >
+         %s
+                \\   ^__^
+                 \\  (oo)\\_______
+                    (__)\\       )\\/\\
+                        ||----w |
+                        ||     ||
+        """;
 
     private static String border(String text, String border) {
         return border.repeat(text.length() + 2);
