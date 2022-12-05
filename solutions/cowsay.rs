@@ -1,6 +1,8 @@
 use std::env;
 
-const TEMPLATE: &str = r#"
+fn template(text: &str) -> String {
+    format!(
+        r#"
  {}
 < {} >
  {}
@@ -9,23 +11,22 @@ const TEMPLATE: &str = r#"
             (__)\       )\/\
                 ||----w |
                 ||     ||
-"#;
+"#,
+        border(text, "_"),
+        text,
+        border(text, "-")
+    )
+}
 
 fn border(text: &str, chr: &str) -> String {
-    return chr.repeat(text.chars().count() + 2);
+    chr.repeat(text.chars().count() + 2)
 }
 
 fn main() {
     let args: Vec<String> = env::args().skip(1).collect();
     if args.len() == 1 {
         let text = &args[0];
-        println!(
-            "{}",
-            TEMPLATE
-                .replacen("{}", &border(text, "_"), 1)
-                .replacen("{}", text, 1)
-                .replacen("{}", &border(text, "-"), 1)
-        );
+        println!("{}", template(text));
     } else {
         println!("Usage: cowsay [message]");
     }

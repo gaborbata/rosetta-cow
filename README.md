@@ -449,7 +449,7 @@ if ($argc == 2) {
 ?>
 ```
 
-> Implemented using: PHP 8.0.0 (cli) (built: Nov 24 2020 22:02:58)
+> Implemented using: PHP 8.0.0 (cli)
 </details>
 
 <details><summary>PowerShell</summary>
@@ -550,7 +550,9 @@ end
 ```rs
 use std::env;
 
-const TEMPLATE: &str = r#"
+fn template(text: &str) -> String {
+    format!(
+        r#"
  {}
 < {} >
  {}
@@ -559,30 +561,29 @@ const TEMPLATE: &str = r#"
             (__)\       )\/\
                 ||----w |
                 ||     ||
-"#;
+"#,
+        border(text, "_"),
+        text,
+        border(text, "-")
+    )
+}
 
 fn border(text: &str, chr: &str) -> String {
-    return chr.repeat(text.chars().count() + 2);
+    chr.repeat(text.chars().count() + 2)
 }
 
 fn main() {
     let args: Vec<String> = env::args().skip(1).collect();
     if args.len() == 1 {
         let text = &args[0];
-        println!(
-            "{}",
-            TEMPLATE
-                .replacen("{}", &border(text, "_"), 1)
-                .replacen("{}", text, 1)
-                .replacen("{}", &border(text, "-"), 1)
-        );
+        println!("{}", template(text));
     } else {
         println!("Usage: cowsay [message]");
     }
 }
 ```
 
-> Implemented using: rustc 1.48.0 (7eac88abb 2020-11-16)
+> Implemented using: rustc 1.65.0
 </details>
 
 <details><summary>Bash</summary>

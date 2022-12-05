@@ -55,11 +55,11 @@ LANG_DATA = {
   },
   rs: {
     name: "Rust",
-    version: "rustc 1.48.0 (7eac88abb 2020-11-16)"
+    version: "rustc 1.65.0"
   },
   php: {
     name: "PHP",
-    version: "PHP 8.0.0 (cli) (built: Nov 24 2020 22:02:58)"
+    version: "PHP 8.0.0 (cli)"
   },
   kt: {
     name: "Kotlin",
