@@ -622,7 +622,7 @@ fi
 ```ts
 #!/usr/bin/env ts-node
 
-function template(text: string): string {
+function template(text: string) {
 return `
  ${border(text, '_')}
 < ${text} >
@@ -635,13 +635,13 @@ return `
 `
 }
 
-function border(text: string, char: string): string {
+function border(text: string, char: string) {
   return char.repeat(text.length + 2)
 }
 
 const args: string[] = process.argv.slice(2)
 if (args.length === 1) {
-  const text: string = args[0]
+  const text = args[0]
   console.log(template(text))
 } else {
   console.log('Usage: cowsay [message]')
