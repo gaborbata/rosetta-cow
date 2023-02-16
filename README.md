@@ -347,6 +347,36 @@ fun main(args: Array<String>) {
 > Implemented using: Kotlin version 1.5.0-release-749
 </details>
 
+<details><summary>LOLCODE</summary>
+
+```lol
+HAI 1.2
+
+VISIBLE "Welcome to Lolcode Cow!"
+I HAS A num_args ITZ COUNT Args
+VISIBLE num_args
+IF num_args IS 1
+    I HAS A text ITZ Args
+    I HAS A length ITZ BOTH SAEM text AN text
+    I HAS A top_border ITZ REPEAT "_", SUM OF length, 2
+    I HAS A bottom_border ITZ REPEAT "-", SUM OF length, 2
+    VISIBLE top_border
+    VISIBLE " " + text + " "
+    VISIBLE bottom_border
+    VISIBLE "        \   ^__^"
+    VISIBLE "         \  (oo)\_______"
+    VISIBLE "            (__)\       )\/\"
+    VISIBLE "                ||----w |"
+    VISIBLE "                ||     ||"
+ELSE
+    VISIBLE "Usage: cowsay [message]"
+KTHXBYE
+
+```
+
+> Implemented using: ChatGPT Feb 13 Version
+</details>
+
 <details><summary>Lua</summary>
 
 ```lua
@@ -376,6 +406,37 @@ end
 ```
 
 > Implemented using: Lua 5.3.3
+</details>
+
+<details><summary>Nim</summary>
+
+```nim
+import os
+
+const template = """
+ %s
+< %s >
+ %s
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+"""
+
+func border(text: string, char: char): string =
+  char.chr * (text.len + 2)
+
+if paramCount() == 1:
+  let text = paramStr(1)
+  let result = template % [border(text, '_'), text, border(text, '-')]
+  echo result
+else:
+  echo "Usage: cowsay [message]"
+
+```
+
+> Implemented using: ChatGPT Feb 13 Version
 </details>
 
 <details><summary>Pascal</summary>
@@ -584,6 +645,39 @@ fn main() {
 ```
 
 > Implemented using: rustc 1.65.0
+</details>
+
+<details><summary>Scala</summary>
+
+```scala
+object Cowsay {
+  val template = """ 
+ %s
+< %s >
+ %s
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+  """
+
+  def border(text: String, char: Char): String = char.toString * (text.length + 2)
+
+  def main(args: Array[String]): Unit = {
+    if (args.length == 1) {
+      val text = args(0)
+      val result = template.format(border(text, '_'), text, border(text, '-'))
+      println(result)
+    } else {
+      println("Usage: cowsay [message]")
+    }
+  }
+}
+
+```
+
+> Implemented using: ChatGPT Feb 13 Version
 </details>
 
 <details><summary>Bash</summary>

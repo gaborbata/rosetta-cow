@@ -76,6 +76,18 @@ LANG_DATA = {
   jl: {
     name: "Julia",
     version: "julia version 1.6.3"
+  },
+  scala: {
+    name: "Scala",
+    version: "ChatGPT Feb 13 Version"
+  },
+  nim: {
+    name: "Nim",
+    version: "ChatGPT Feb 13 Version"
+  },
+  lol: {
+    name: "LOLCODE",
+    version: "ChatGPT Feb 13 Version"
   }
 }
 
